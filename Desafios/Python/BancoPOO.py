@@ -1,5 +1,5 @@
 """""
-Classe 'Historico' :
+Classe 'Historico':
 
 Adicionar transação
 
@@ -35,7 +35,7 @@ Realiza transaação
 Adiciona conta
 
 
-Classe 'Pessoa Fisica':
+Classe 'Pessoa Fisica': 
 
 Variaveis: CPF, nome, nata de nascimento
 
