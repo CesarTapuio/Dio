@@ -3,11 +3,11 @@ import java.util.Scanner;
 
 public class SmartTv {
 
-    static boolean ligada;
-    static int canal;
-    static int volume;
+    boolean ligada;
+    int canal;
+    int volume;
 
-    public static void Ligar(){
+    public void Ligar(){
 
         Scanner scanner = new Scanner(System.in);
 
@@ -15,7 +15,7 @@ public class SmartTv {
         // scanner close()
 
         System.out.println("\n[1] Ligar\n[2] Desligar");
-        int aux = scanner.nextInt();
+        int aux = args[0];
 
         if (aux == 1){
             ligada = true;
