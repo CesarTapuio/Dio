@@ -15,7 +15,7 @@ public class SmartTv {
         // scanner close()
 
         System.out.println("\n[1] Ligar\n[2] Desligar");
-        int aux = args[0];
+        int aux = scanner.nextInt();
 
         if (aux == 1){
             ligada = true;
