@@ -35,4 +35,4 @@ Desenvolver um sistema simples de gerenciamento de biblioteca que permita adicio
 
 - Utilize conceitos de POO como classes, objetos, encapsulamento, herança e polimorfismo.
 - Pense em como você pode organizar suas classes e métodos para que o código seja modular e fácil de entender.
-- Considere adicionar validações para garantir que um livro só pode ser emprestado se estiver disponível e que um usuário só pode devolver um livro que ele realmente emprestou.
+- Considere adicionar validações para garantir que um livro só pode ser emprestado se estiver disponível e que um usuário só pode devolver um livro que ele realmente emprestou. 
