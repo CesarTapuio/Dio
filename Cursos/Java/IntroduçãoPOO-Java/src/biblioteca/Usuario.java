@@ -1,57 +1,45 @@
 package biblioteca;
-public class Usuario {
-    //- Atributos: nome, ID, lista de livros emprestados.
-    //- Métodos: getters e setters, método para emprestar e devolver livros.
 
+import java.util.Arrays;
+
+public class Usuario {
     private final String nome;
     private final int ID;
-    private String [] livrosEmprestados = new String[10];
-    //auxiliares:
-    int i = 0;
+    private String[] livrosEmprestados = new String[10];
+    private int i = 0;
 
-    public Usuario(String nome, int ID){
+    public Usuario(String nome, int ID) {
         this.nome = nome;
         this.ID = ID;
     }
 
-
-    // getter e setters:
-
-    public String getNome(){
-
-        return this.nome;
-
+    public String getNome() {
+        return nome;
     }
 
-
-    public int getID(){
-
-        return this.ID;
-
+    public int getID() {
+        return ID;
     }
 
-    public void setLivrosEmprestados(String livroEmprestados){
-
-        do{
-            if (this.livrosEmprestados[i] == null){
-                this.livrosEmprestados[i] = livroEmprestados;
-                i = 0;
-                break;
-            }
-            else if(i>= 10){
-                System.out.println("\nAlcancou o numero maximo de livros emprestados!\n");
-                break;
-            }
+    public void setLivrosEmprestados(String livroEmprestado) {
+        if (i < 10) {
+            livrosEmprestados[i] = livroEmprestado;
             i++;
-        }while(this.livrosEmprestados[i]!=null);
-
+        } else {
+            System.out.println("\nAlcançou o número máximo de livros emprestados!\n");
+        }
     }
 
-    public String[] getLivrosEmprestados(){
-
-        return livrosEmprestados;
-
+    public void getLivrosEmprestados() {
+        System.out.println(Arrays.toString(livrosEmprestados));
     }
 
-
+    public boolean getLivroEspecifico(String livro) {
+        for (int j = 0; j < 10; j++) {
+            if (livrosEmprestados[j] != null && livrosEmprestados[j].equals(livro)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

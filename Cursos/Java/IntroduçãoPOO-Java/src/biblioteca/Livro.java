@@ -1,20 +1,18 @@
 package biblioteca;
-public class Livro {
-    //Atributos: título, autor, ISBN, disponibilidade.
-    //- Métodos: getters e setters, método para emprestar e devolver o livro.
 
+public class Livro {
     private String titulo;
     private String autor;
     private boolean disponibilidade;
 
-    public Livro(String titulo,String autor, boolean disponibilidade){
+    public Livro(String titulo, String autor, boolean disponibilidade) {
         this.titulo = titulo;
         this.autor = autor;
         this.disponibilidade = disponibilidade;
     }
 
     public String getTitulo() {
-        return this.titulo;
+        return titulo;
     }
 
     public void setTitulo(String titulo) {
@@ -22,27 +20,18 @@ public class Livro {
     }
 
     public String getAutor() {
-        return this.autor;
+        return autor;
     }
 
     public void setAutor(String autor) {
         this.autor = autor;
     }
 
-    public boolean isDisponibilidade() {
-        return this.disponibilidade;
+    public boolean getDisponibilidade() {
+        return disponibilidade;
     }
 
     public void setDisponibilidade(boolean disponibilidade) {
         this.disponibilidade = disponibilidade;
     }
-    
-
-
-
-
-
-
-
-
 }
