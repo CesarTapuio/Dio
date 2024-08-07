@@ -3,11 +3,11 @@ public class Usuario {
     //- Atributos: nome, ID, lista de livros emprestados.
     //- Métodos: getters e setters, método para emprestar e devolver livros.
 
-    private String nome;
-    private int ID;
+    private final String nome;
+    private final int ID;
     private String [] livrosEmprestados = new String[10];
     //auxiliares:
-    int i;
+    int i = 0;
 
     public Usuario(String nome, int ID){
         this.nome = nome;
@@ -30,9 +30,20 @@ public class Usuario {
 
     }
 
-    public void setLivrosEmprestados(String [] livrosEmprestados){
+    public void setLivrosEmprestados(String livroEmprestados){
 
-        this.livrosEmprestados = livrosEmprestados;
+        do{
+            if (this.livrosEmprestados[i] == null){
+                this.livrosEmprestados[i] = livroEmprestados;
+                i = 0;
+                break;
+            }
+            else if(i>= 10){
+                System.out.println("\nAlcancou o numero maximo de livros emprestados!\n");
+                break;
+            }
+            i++;
+        }while(this.livrosEmprestados[i]!=null);
 
     }
 

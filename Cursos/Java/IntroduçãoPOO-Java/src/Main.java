@@ -8,19 +8,18 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String livro;
         String autor;
-        boolean disponibilidade = false;
+        boolean disponibilidade;
         String nomeUsuario;
         int ID;
 
         //auxiliares:
         int aux;
-        int i = 0;
 
 
 
         while(true){
 
-            System.out.println("\n[1] Adicionar livro\n[2] Adicionar usuario\n[3]Listar livros da Biblioteca\n");
+            System.out.println("\n[1] Adicionar livro na biblioteca\n[2] Adicionar usuario\n[3]Listar livros da Biblioteca\n[4] Emprestar livro para usuario");
             aux = scanner.nextInt();
 
             //adicionar livros
@@ -74,9 +73,25 @@ public class Main {
 
         }
 
+
+            //emprestar livro
+            if(aux == 4){
+                
+                System.out.println("Digite o Titulo do livro que sera emprestado:");
+                livro = scanner.next();
+                
+                System.out.println("Digite o nome do Usuario que fara o emprestimo:");
+                nomeUsuario = scanner.next();
+
+                biblioteca.emprestarLivro(livro, nomeUsuario);
+                
+
+                
+
+            }
     }
 
-
-        
+    scanner.close();
+         
     }
 }

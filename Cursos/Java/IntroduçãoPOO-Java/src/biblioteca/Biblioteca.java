@@ -32,4 +32,19 @@ public class Biblioteca {
             
         }
     }
+
+    public void emprestarLivro(String titulo, String nomeUsuario){
+
+        for(Livro livro : livros){
+            if (titulo.equals(livro.getTitulo())){
+                for(Usuario usuario: usuarios){
+                    if(nomeUsuario.equals(usuario.getNome())){
+                        usuario.setLivrosEmprestados(titulo);
+                        livro.setDisponibilidade(false);
+                    }
+                }
+            }
+        }
+
+    }
 }
