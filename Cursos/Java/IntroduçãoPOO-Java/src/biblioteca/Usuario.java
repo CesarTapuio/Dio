@@ -7,6 +7,7 @@ public class Usuario {
     private final int ID;
     private String[] livrosEmprestados = new String[10];
     private int i = 0;
+    private int j;
 
     public Usuario(String nome, int ID) {
         this.nome = nome;
