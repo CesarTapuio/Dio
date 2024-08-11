@@ -9,18 +9,21 @@ import java.util.Scanner;
 
 //Preciso colocar o random antes de entrar em Cont, pois preciso ver se não existe um numero de conta já existente
 
-public class Conta {
+public class Conta{
 
     private String nomeTitular;
     private double saldo;
     private final Scanner scanner = new Scanner(System.in);
     private int numero_conta;
+    private final String CPF;
     
     //auxiliares
     int i;
 
-    public Conta (String nomeTitular){
-        this.nomeTitular = nomeTitular;
+    public Conta (String nomeTitular, int numero_conta, String CPF){
+    this.numero_conta = numero_conta;
+    this.nomeTitular = nomeTitular;
+    this.CPF = CPF;
     }
 
     public int getNumero_conta() {
