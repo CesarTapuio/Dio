@@ -13,7 +13,6 @@ public class Main {
 
         // auxiliares:
         int aux;
-        int i;
 
         while (true) {
             System.out.println("\n[1] Adicionar livro na biblioteca\n[2] Adicionar usuário\n[3] Listar livros da Biblioteca\n[4] Emprestar livro para usuário");
